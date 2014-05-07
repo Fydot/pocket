@@ -1,3 +1,18 @@
+### /Users/hdd/.gitignore-boilerplates/Global/VIM.gitignore
+
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+.DS_Store
+Session.vim
+.netrwhist
+*~
+
+
+###Pycharm
+.idea/
+### /Users/hdd/.gitignore-boilerplates/Python.gitignore
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -6,16 +21,12 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-.Python
-env/
+.buildout/
 bin/
 build/
-develop-eggs/
 dist/
-eggs/
 lib/
 lib64/
-parts/
 sdist/
 var/
 *.egg-info/
@@ -24,13 +35,10 @@ var/
 
 # Installer logs
 pip-log.txt
-pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
 .tox/
 .coverage
-.cache
 nosetests.xml
 coverage.xml
 
@@ -41,14 +49,3 @@ coverage.xml
 .mr.developer.cfg
 .project
 .pydevproject
-
-# Rope
-.ropeproject
-
-# Django stuff:
-*.log
-*.pot
-
-# Sphinx documentation
-docs/_build/
-
