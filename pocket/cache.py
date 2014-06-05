@@ -2,6 +2,7 @@
 # coding: utf8
 import redis
 import ujson
+import logging
 
 
 storage = None
@@ -35,16 +36,17 @@ def idcache(app, namespace, ttl=-1):
         def _wrap(id):
             if not storage:
                 config_storage()
-            print storage
             key = "%s:%s:%s" % (app, namespace, id)
             cache_obj = storage.get_cache(key)
             if cache_obj:
+                logging.debug("cache success in %s:%s on key %s" % (app, namespace, key))
                 return ujson.loads(cache_obj)
             result = func(id)
             if ttl == -1:
                 storage.set_cache(key, ujson.dumps(result))
             else:
                 storage.set_cache(key, ujson.dumps(result), ttl)
+            logging.debug("cache failed in %s:%s on key %s" % (app, namespace, key))
             return result
         return _wrap
     return _cache
