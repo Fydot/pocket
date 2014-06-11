@@ -1,0 +1,8 @@
+language: python
+script: python bootstrap.py
+branches:
+  only:
+    - master
+  notifications:
+    email:
+      - ifidot@gmail.com
