@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 
 setup(name='pocket',
-      version='0.4.1',
+      version='0.4.2',
       author='huangdiandian',
       author_email='ifidot@gmail.com',
       description='pocket',
